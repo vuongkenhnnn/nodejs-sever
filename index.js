@@ -1,6 +1,5 @@
 // Import packages
 const express = require("express");
-const home = require("./routes/home");
 const listener = require("./routes/listener");
 
 // Middlewares
@@ -8,7 +7,6 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use("/home", home);
 app.use("/alert-hook", listener);
 
 // connection
