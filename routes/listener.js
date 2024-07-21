@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.post("/", async (req, res, next) => {
   const data = req.body;
-  const filePath = "data.json";
+  const filePath = "./data.json";
 
   fs.writeFile(filePath, JSON.stringify(data, null, 2), (err) => {
     if (err) {
